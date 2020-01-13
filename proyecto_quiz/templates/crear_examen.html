@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear_examen</title>
+</head>
+<body>
+
+<form action="{% url 'quiz:agregar_examen' %}" method="POST">{% csrf_token %}
+<label>Nombre del Examen:</label>
+<br><br>
+<input type="text" required id="nom_examen" name="nom_examen" placeholder="Ingrese el nombre del examen">
+<br><br>
+<label>Autor:</label>
+<br><br>
+<input type="text" required id="nom_usuario" name="nom_usuario" placeholder="Ingrese el nombre del autor">
+<br><br>
+<input type="submit" value="Crear examen">
+</form>
+</body>
+</html>

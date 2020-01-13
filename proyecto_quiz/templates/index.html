@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de examenes</title>
+</head>
+<body>
+<div><a href="{% url 'quiz:agregar_examen' %}">Agregar Examen</a></div>
+<br>
+{% for e in examenes %}
+<div>
+    <h1><a href="#">Examen: {{e.nombre}}</a></h1>
+    <label>Autor: {{e.nombre_usuario}}</label>
+</div>
+<br>
+{% endfor %}
+</body>
+</html>
