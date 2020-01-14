@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mis examenes</title>
+</head>
+<body>
+<a href="{% url 'quiz:agregar_examen'%}">Crear nuevo examen</a>
+<label><h2>Mis examenes</h2></label>
+<br>
+{% for e in examenes %}
+    <hr>
+    <label><a href="#">{{e.nombre}}</a></label>
+    <hr>
+{% endfor %}
+<br>
+
+<a href="{% url 'quiz:cerrar_sesion' %}">Cerrar sesion</a>
+</body>
+</html>

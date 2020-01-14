@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if error %}
+        <label>{{error}}</label>
+    {% endif %}
+<form method="POST" action="{% url 'quiz:iniciar_sesion' %}">
+    {% csrf_token %}
+    <label for="usuario">usuario: </label> <input type="text" placeholder="ingrese su nombre de usuario" id="usuario" name="usuario">
+    <br><br>
+    <label for="clave">clave: </label> <input type="password" placeholder="ingrese su clave" id="clave" name="clave">
+    <br><br>
+    <input type="submit" value="iniciar sesion">
+</form>
+
+    <a href="{% url 'quiz:index' %}">Salir</a>
+</body>
+</html>

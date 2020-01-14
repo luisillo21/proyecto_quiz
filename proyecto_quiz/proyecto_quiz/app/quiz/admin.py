@@ -3,5 +3,5 @@ from .models import *
 # Register your models here.
 
 admin.site.register(Examen)
-admin.site.register(Autor)
+admin.site.register(Usuario)
 admin.site.register(Pregunta)
